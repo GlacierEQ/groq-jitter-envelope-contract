@@ -1,0 +1,10 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/groq-jitter-envelope-contract",
+  "source_sha": "8e3b6bf03cf0a1ee14098743fb41abac2a78e8b8968048e5f117bafaf6d0edf4",
+  "proof_receipt_digest": "c27ac1beb92a0f5e25733ee372d123ab5144e96593874114a7bbe9a7de3a9a64",
+  "not_after": 1786401439.758687,
+  "mac": "b4ea3378fdd73fd1b7f2b1d9cd983967f3a024701fc7649791bb3e672f57aa63",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true
+}

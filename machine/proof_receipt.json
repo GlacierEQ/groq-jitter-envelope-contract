@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/groq-jitter-envelope-contract",
+  "source_sha": "8e3b6bf03cf0a1ee14098743fb41abac2a78e8b8968048e5f117bafaf6d0edf4",
+  "proof_id": "wave-b-groq-jitter-envelope-contract-1786315039",
+  "environment": {
+    "python": "3.9.6",
+    "PYTHONPATH": "."
+  },
+  "tests": [
+    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-09T22:37Z",
+  "artifact_hashes": {
+    "operability_receipt": "64e41d75ad6dd5ad929a9f88ab6d5ac9d89c85f80ac69057fd978ce08d9efbcc"
+  },
+  "scratch_proof_log": "wave_b/groq-jitter-envelope-contract/proof.log"
+}
