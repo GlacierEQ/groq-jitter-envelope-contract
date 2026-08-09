@@ -1,8 +1,9 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/groq-jitter-envelope-contract",
-  "at": "2026-08-09T22:37Z",
-  "source_sha": "8e3b6bf03cf0a1ee14098743fb41abac2a78e8b8968048e5f117bafaf6d0edf4",
+  "at": "2026-08-09T22:57Z",
+  "source_sha": "7a94dce78fbd8ded8049c435afee50dd5c61701dd98ab11d26309a70c48257c5",
+  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
   "entry": "scripts/operate.py",
   "primary_output": {
     "expected_violation": "BURST_TOO_HIGH",

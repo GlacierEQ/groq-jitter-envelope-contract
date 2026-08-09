@@ -1,8 +1,9 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/groq-jitter-envelope-contract",
-  "source_sha": "8e3b6bf03cf0a1ee14098743fb41abac2a78e8b8968048e5f117bafaf6d0edf4",
-  "proof_id": "wave-b-groq-jitter-envelope-contract-1786315039",
+  "source_sha": "7a94dce78fbd8ded8049c435afee50dd5c61701dd98ab11d26309a70c48257c5",
+  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
+  "proof_id": "wave-b-fix-groq-jitter-envelope-contract-1786316261",
   "environment": {
     "python": "3.9.6",
     "PYTHONPATH": "."
@@ -12,6 +13,9 @@
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
+  ],
+  "authority_tests": [
+    "tests/test_promotion_authority.py::test_real_machine_grant_verifies_against_proof_receipt"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
@@ -23,9 +27,9 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T22:37Z",
+  "timestamp": "2026-08-09T22:57Z",
   "artifact_hashes": {
-    "operability_receipt": "64e41d75ad6dd5ad929a9f88ab6d5ac9d89c85f80ac69057fd978ce08d9efbcc"
+    "operability_receipt": "b57950cf1e75a57bae33adfb40c85f0652352324442a8f99c3156840af0d7261"
   },
   "scratch_proof_log": "wave_b/groq-jitter-envelope-contract/proof.log"
 }
