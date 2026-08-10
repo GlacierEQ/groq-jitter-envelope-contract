@@ -1,1 +1,23 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/groq-jitter-envelope-contract",
+  "capability_family": "latency_shape_envelope_governance",
+  "capabilities": [
+    "multi-window-jitter-envelopes",
+    "burst-latency-hard-limits",
+    "plateau-drift-detection",
+    "tail-latency-envelope-checking",
+    "hard-envelope-abort-semantics",
+    "deterministic-latency-violation-receipts"
+  ],
+  "evidence_refs": [
+    "src/jitter_envelope.py",
+    "native/jitter.c",
+    "tests/test_jitter_envelope.py",
+    "tests/test_adversarial.py",
+    "native/jitter_test.c",
+    "machine/proof_receipt.json",
+    "machine/canonical-position.json"
+  ],
+  "truth_boundary": "Repository-local latency-envelope mechanisms only. No Groq adoption, production latency-controller deployment, or company-internal SLO model is implied."
+}
