@@ -1,0 +1,22 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/groq-jitter-envelope-contract",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "Groq",
+  "canonical_identity": "jitter-envelope-contract",
+  "unique_value": [
+    "latency shape is governed across burst, plateau, and tail windows rather than reduced to one percentile",
+    "envelope violations trigger a hard abort instead of being averaged away",
+    "deterministic violation codes make pathological latency shape reproducible"
+  ],
+  "capability_contribution": {
+    "family": "latency_shape_envelope_governance",
+    "extractable_mechanisms": ["multi-window jitter envelopes", "hard envelope abort", "deterministic latency violation codes"],
+    "ownership": "This repository remains the owning Groq-specialist implementation; extraction preserves identity and lineage."
+  },
+  "integration_policy": {"preserve_repository_identity":true,"preserve_lineage":true,"presentation_independent":true,"size_or_loc_not_dispositive":true,"absorption_requires_functional_equivalence":true,"absorption_requires_proof_equivalence":true},
+  "next_evolution": "Add adaptive multi-window envelope learning, change-point detection, and workload-class jitter profiles while retaining deterministic hard-abort semantics.",
+  "evidence_refs": ["ISSUE_CONTRACT.md","machine/target-contract.json","machine/proof_receipt.json","machine/operability_receipt.json","machine/promotion_authority.json"],
+  "nonclaims": ["no Groq affiliation", "not a production Groq latency controller"]
+}
