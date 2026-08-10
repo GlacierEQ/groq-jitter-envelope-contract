@@ -1,21 +1,18 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/groq-jitter-envelope-contract",
-  "source_sha": "7a94dce78fbd8ded8049c435afee50dd5c61701dd98ab11d26309a70c48257c5",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
-  "proof_id": "wave-b-fix-groq-jitter-envelope-contract-1786316261",
+  "source_sha": "caf5c23254eb240296a65493aee2bf44d516cf98381033659e14281c320a8952",
+  "proof_id": "elite-groq-jitter-envelope-contract-1786335149",
   "environment": {
-    "python": "3.9.6",
-    "PYTHONPATH": "."
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/groq-jitter-envelope-contract:/Users/kcbflux/job-app/repos/groq-jitter-envelope-contract/src",
+    "entry": "unittest"
   },
   "tests": [
-    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
-  ],
-  "authority_tests": [
-    "tests/test_promotion_authority.py::test_real_machine_grant_verifies_against_proof_receipt"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
@@ -27,9 +24,8 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T22:57Z",
+  "timestamp": "2026-08-10T04:12Z",
   "artifact_hashes": {
-    "operability_receipt": "b57950cf1e75a57bae33adfb40c85f0652352324442a8f99c3156840af0d7261"
-  },
-  "scratch_proof_log": "wave_b/groq-jitter-envelope-contract/proof.log"
+    "operability_receipt": "bc6d8a5f6dda85d950dfdde75dcdbcd9f5c43d5d1c281385e97e7d3e302e1fa3"
+  }
 }

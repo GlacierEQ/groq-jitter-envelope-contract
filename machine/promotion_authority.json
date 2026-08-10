@@ -1,12 +1,11 @@
 {
   "schema": "glaciereq.promotion-authority-grant.v1",
   "repository": "GlacierEQ/groq-jitter-envelope-contract",
-  "source_sha": "7a94dce78fbd8ded8049c435afee50dd5c61701dd98ab11d26309a70c48257c5",
-  "proof_receipt_digest": "f958b0c6c66c8a0af30b5586150e75975068e105722c64336fbfe128e8192b57",
-  "not_after": 1788908261.7824872,
-  "mac": "527f99eedf850ba4933c026a1a913d1d9af265b14ce2c95296197003cd320c07",
+  "source_sha": "caf5c23254eb240296a65493aee2bf44d516cf98381033659e14281c320a8952",
+  "proof_receipt_digest": "dfe0b2b05c45f1d4bbd8ce82c4910dc396721b5ad5f1c6faa8e3cdb30921c5fc",
+  "not_after": 1788927149.234226,
+  "mac": "ad06bccdb3d42216d79257b61be8f48ded17ea87d6fa2c51d43c50f0ad4b7faa",
   "issuer": "local_operator_promotion_authority",
   "verified": true,
-  "verification_procedure": "LOCAL reference authority only. Secret constant: src/promotion_authority.py::LOCAL_OPERATOR_SECRET (= b'glaciereq-local-operator-promotion-authority-v1'). Verify: python3 scripts/verify_promotion_grant.py",
   "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
 }

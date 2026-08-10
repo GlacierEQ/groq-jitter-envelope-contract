@@ -1,9 +1,8 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/groq-jitter-envelope-contract",
-  "at": "2026-08-09T22:57Z",
-  "source_sha": "7a94dce78fbd8ded8049c435afee50dd5c61701dd98ab11d26309a70c48257c5",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "caf5c23254eb240296a65493aee2bf44d516cf98381033659e14281c320a8952",
   "entry": "scripts/operate.py",
   "primary_output": {
     "expected_violation": "BURST_TOO_HIGH",
@@ -14,6 +13,5 @@
     "violation": "BURST_TOO_HIGH"
   },
   "dual_run_ok": true,
-  "result": "PASS",
-  "scratch_launch_log": "wave_b/groq-jitter-envelope-contract/launch.log"
+  "result": "PASS"
 }
