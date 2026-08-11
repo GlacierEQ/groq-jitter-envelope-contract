@@ -5,18 +5,50 @@
     "family": "elite-estate"
   },
   "current": {
-    "state": "PROMOTED",
+    "state": "EVOLVING",
     "implemented": true,
     "tested": true,
     "deployed": false
   },
+  "mechanism": {
+    "legacy_surface": "fixed-window jitter envelope and deterministic violation codes remain backward compatible",
+    "adaptive_surface": "explicit per-workload multi-window envelope learning with change-point and learned-profile hard abort",
+    "hard_abort_precedence": [
+      "invalid or empty evidence",
+      "unknown or mismatched workload profile",
+      "immutable burst median p95 or stdev envelope violation",
+      "warmed change-point threshold",
+      "warmed learned-profile threshold"
+    ],
+    "learning_bounds": [
+      "caller-declared workload profiles",
+      "fixed fast slow and deviation EWMA coefficients",
+      "fixed change-ratio threshold",
+      "fixed sigma multiplier and minimum margin",
+      "rejected windows do not update adaptive state"
+    ]
+  },
+  "proof": {
+    "consumed_cursor": "next:adaptive_multi_window_learning_change_point_detection_workload_class_profiles_hard_abort",
+    "candidate_source_sha": "f523d013a75d49dcddf90b4f02762a2ce7f5ba26",
+    "workflow_run": 31541043104,
+    "python": "PASS",
+    "native_c": "PASS",
+    "receipt": "machine/evolution-receipts/2026-08-11-adaptive-multi-window-jitter.json"
+  },
+  "next_cursor": "next:authenticated_latency_sample_provenance_model_freshness_restart_safe_profiles_and_distributed_regime_coordination",
   "nonclaims": [
-    "no employer affiliation",
-    "no production deployment without receipt"
+    "no Groq affiliation",
+    "no production deployment without receipt",
+    "no provider telemetry or authenticated latency sample source",
+    "no authenticated workload identity",
+    "no arbitrary machine-learning policy adaptation",
+    "no model freshness expiry restart-safe profile state or distributed regime coordination yet"
   ],
   "donor_plan": {
     "mode": "none",
     "donors": []
   },
-  "frozen_at": "2026-08-10T04:12Z"
+  "frozen_at": "2026-08-10T04:12Z",
+  "refreshed_at": "2026-08-11T22:08Z"
 }
