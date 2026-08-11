@@ -1,0 +1,35 @@
+{
+  "schema": "glaciereq.repo-evolution-receipt.v1",
+  "repository": "GlacierEQ/groq-jitter-envelope-contract",
+  "consumed_cursor": "next:adaptive_multi_window_learning_change_point_detection_workload_class_profiles_hard_abort",
+  "candidate_source_sha": "f523d013a75d49dcddf90b4f02762a2ce7f5ba26",
+  "workflow_run": 31541043104,
+  "python": "PASS",
+  "native_c": "PASS",
+  "implemented": [
+    "legacy fixed jitter-envelope APIs preserved in Python and native C",
+    "per-workload adaptive profiles with isolated learned state",
+    "immutable hard burst median p95 and stdev envelope before any adaptive learning",
+    "bounded fast and slow multi-window EWMA learning for median p95 and stdev",
+    "change-point detection from prospective fast-versus-slow regime divergence",
+    "learned-profile limits derived from slow baseline and bounded observed deviation",
+    "hard-abort windows do not mutate or normalize the learned baseline",
+    "native caller-owned adaptive state is bound to a stable workload profile identifier"
+  ],
+  "adversarial_proof": [
+    "replayed latency regime jumps remain CHANGE_POINT hard aborts without increasing learned window count",
+    "interactive and bulk workload profiles learn independently",
+    "absolute hard-envelope violations dominate adaptive state and cannot be learned into normality",
+    "learned-profile breach can refuse even when change-point threshold is intentionally loose",
+    "unknown class profile mismatch empty nonfinite and invalid evidence fail closed"
+  ],
+  "truth_boundaries": [
+    "latency samples and workload identities are caller supplied and unauthenticated",
+    "adaptive behavior is bounded deterministic EWMA and threshold logic rather than arbitrary machine learning",
+    "profile state is in memory and is not restart safe or durably versioned",
+    "profile coordination is local and is not distributed or quorum reconciled",
+    "native workload profile identifiers are deterministic labels rather than authenticated identities",
+    "no Groq affiliation adoption production deployment provider telemetry or internal scheduler knowledge is claimed"
+  ],
+  "next_cursor": "next:authenticated_latency_sample_provenance_model_freshness_restart_safe_profiles_and_distributed_regime_coordination"
+}
