@@ -6,17 +6,56 @@
   "company_target": "Groq",
   "canonical_identity": "jitter-envelope-contract",
   "unique_value": [
-    "latency shape is governed across burst, plateau, and tail windows rather than reduced to one percentile",
-    "envelope violations trigger a hard abort instead of being averaged away",
-    "deterministic violation codes make pathological latency shape reproducible"
+    "latency shape is governed across burst plateau and tail windows rather than reduced to one percentile",
+    "immutable envelope violations trigger hard abort instead of being averaged away",
+    "deterministic violation codes make pathological latency shape reproducible",
+    "adaptive workload profiles learn bounded multi-window baselines without allowing rejected regimes to normalize themselves",
+    "change-point and learned-profile hard aborts preserve the last accepted baseline"
   ],
   "capability_contribution": {
     "family": "latency_shape_envelope_governance",
-    "extractable_mechanisms": ["multi-window jitter envelopes", "hard envelope abort", "deterministic latency violation codes"],
+    "extractable_mechanisms": [
+      "multi-window jitter envelopes",
+      "hard envelope abort",
+      "deterministic latency violation codes",
+      "per-workload adaptive jitter profiles",
+      "bounded fast-slow change-point detection",
+      "rejected-window baseline preservation"
+    ],
     "ownership": "This repository remains the owning Groq-specialist implementation; extraction preserves identity and lineage."
   },
-  "integration_policy": {"preserve_repository_identity":true,"preserve_lineage":true,"presentation_independent":true,"size_or_loc_not_dispositive":true,"absorption_requires_functional_equivalence":true,"absorption_requires_proof_equivalence":true},
-  "next_evolution": "Add adaptive multi-window envelope learning, change-point detection, and workload-class jitter profiles while retaining deterministic hard-abort semantics.",
-  "evidence_refs": ["ISSUE_CONTRACT.md","machine/target-contract.json","machine/proof_receipt.json","machine/operability_receipt.json","machine/promotion_authority.json"],
-  "nonclaims": ["no Groq affiliation", "not a production Groq latency controller"]
+  "integration_policy": {
+    "preserve_repository_identity": true,
+    "preserve_lineage": true,
+    "presentation_independent": true,
+    "size_or_loc_not_dispositive": true,
+    "absorption_requires_functional_equivalence": true,
+    "absorption_requires_proof_equivalence": true
+  },
+  "evolution": {
+    "consumed_cursor": "next:adaptive_multi_window_learning_change_point_detection_workload_class_profiles_hard_abort",
+    "candidate_source_sha": "f523d013a75d49dcddf90b4f02762a2ce7f5ba26",
+    "workflow_run": 31541043104,
+    "receipt": "machine/evolution-receipts/2026-08-11-adaptive-multi-window-jitter.json"
+  },
+  "next_evolution": "Authenticate latency-sample and workload provenance, expire stale learned evidence, persist/version profile state safely across restart, and coordinate regime state across controller instances without weakening hard-abort semantics.",
+  "evidence_refs": [
+    "ISSUE_CONTRACT.md",
+    "src/jitter_envelope.py",
+    "native/jitter.c",
+    "tests/test_adaptive_jitter.py",
+    "native/jitter_test.c",
+    "machine/target-contract.json",
+    "machine/evolution-receipts/2026-08-11-adaptive-multi-window-jitter.json",
+    "machine/proof_receipt.json",
+    "machine/operability_receipt.json",
+    "machine/promotion_authority.json"
+  ],
+  "nonclaims": [
+    "no Groq affiliation",
+    "not a production Groq latency controller",
+    "latency samples and workload identities are caller supplied rather than authenticated provider telemetry",
+    "no arbitrary machine-learning policy adaptation",
+    "no restart-safe durable or distributed adaptive profile state yet"
+  ]
 }
