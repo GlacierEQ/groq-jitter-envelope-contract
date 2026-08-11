@@ -8,16 +8,26 @@
     "plateau-drift-detection",
     "tail-latency-envelope-checking",
     "hard-envelope-abort-semantics",
-    "deterministic-latency-violation-receipts"
+    "deterministic-latency-violation-receipts",
+    "per-workload-adaptive-jitter-profiles",
+    "bounded-fast-slow-window-learning",
+    "change-point-hard-abort",
+    "learned-profile-hard-abort",
+    "rejected-window-baseline-preservation",
+    "workload-profile-state-isolation",
+    "invalid-latency-evidence-refusal",
+    "legacy-fixed-envelope-backward-compatibility"
   ],
   "evidence_refs": [
     "src/jitter_envelope.py",
     "native/jitter.c",
     "tests/test_jitter_envelope.py",
+    "tests/test_adaptive_jitter.py",
     "tests/test_adversarial.py",
     "native/jitter_test.c",
+    "machine/evolution-receipts/2026-08-11-adaptive-multi-window-jitter.json",
     "machine/proof_receipt.json",
     "machine/canonical-position.json"
   ],
-  "truth_boundary": "Repository-local latency-envelope mechanisms only. No Groq adoption, production latency-controller deployment, or company-internal SLO model is implied."
+  "truth_boundary": "Repository-local latency-envelope mechanisms over caller-supplied samples and workload labels. No Groq adoption, provider telemetry, authenticated workload identity, production latency-controller deployment, arbitrary machine-learning policy adaptation, restart-safe profile persistence, or distributed regime coordination is implied."
 }
